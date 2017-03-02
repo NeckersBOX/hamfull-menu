@@ -6,7 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
   </head>
   <body>
-    <div class="hamfull">
+    <!-- workaround to toggle the menu without js -->
+    <input type="checkbox" id="hamfull-expand" />
+    <label class="hamfull" for="hamfull-expand">
       <i class="material-icons">menu</i>
       <ul>
         <li>Home Page</li>
@@ -14,7 +16,7 @@
         <li>Latest News</li>
         <li>Contacts</li>
       </ul>
-    </div>
+    </label>
 
     <h1 style="text-align: center; font-family: sans-serif">Hamfull</h1>
     <p style="text-align: center; font-family: sans-serif">

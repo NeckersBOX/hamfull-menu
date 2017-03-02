@@ -1,21 +1,67 @@
 @import 'config'
 
+#hamfull-expand
+  display: none
+
+#hamfull-expand:checked + label
+  background-color: transparent
+
+  i
+    display: none
+    transition: display $btn-transition-duration linear
+
+  ul
+    display: block
+    background-color: $menu-background
+    position: absolute
+    top: 0
+    left: 0
+    margin: 0
+    width: 100vw
+    height: 100vh
+    padding: 0
+
 .hamfull
   background-color: $btn-background
   width: $btn-size
-  height: $btn-size
-  margin-top: -$btn-size
-  margin-left: -$btn-size
-  position: relative
-  top: $btn-size / 2
-  left: $btn-size / 2
+  height: $btn-size - $icon-margin-top
   cursor: pointer
+  padding-top: $icon-margin-top
+  @if $animation
+    position: absolute
+    top: 0
+    left: 0
+  @else
+    display: inline-block
 
   i
     color: $btn-color
-    position: relative
-    left: $btn-size / 2
-    top: $btn-size / 2
+    display: block
+    text-align: center
 
   ul
     display: none
+
+  &:hover, &:focus
+    background-color: $btn-background-hover
+    transition: background-color $btn-transition-duration linear
+
+    @if $animation
+      animation-duration: $btn-animation-duration
+      animation-name: beats
+      animation-iteration-count: infinite
+      animation-timing-function: linear
+
+@keyframes beats
+  0%
+    width: $btn-size
+    height: $btn-size - $icon-margin-top
+
+  50%
+    width: $btn-size + $btn-expand-size
+    height: ($btn-size - $icon-margin-top) + $btn-expand-size
+    padding-top: $icon-margin-top + ($btn-expand-size / 2)
+
+  100%
+    width: $btn-size
+    height: $btn-size - $icon-margin-top
