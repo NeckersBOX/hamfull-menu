@@ -1,0 +1,23 @@
+{
+  "name": "hamfull-menu",
+  "version": "1.0.1",
+  "description": "An hamburger-like menu, when you click over it the menu appears in full window. No javascript libraries requested. Written in SASS.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "menu",
+    "hamburger",
+    "sass",
+    "css",
+    "fullwindow"
+  ],
+  "author": "Davide Francesco Merico",
+  "license": "GPL-3.0",
+  "dependencies": {
+    "gulp": "^3.9.1",
+    "gulp-sass": "^3.1.0",
+    "gulp-sourcemaps": "^2.4.1"
+  }
+}
