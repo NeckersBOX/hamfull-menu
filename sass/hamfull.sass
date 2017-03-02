@@ -1,2 +1,21 @@
+@import 'config'
+
 .hamfull
-  background-color: #000
+  background-color: $btn-background
+  width: $btn-size
+  height: $btn-size
+  margin-top: -$btn-size
+  margin-left: -$btn-size
+  position: relative
+  top: $btn-size / 2
+  left: $btn-size / 2
+  cursor: pointer
+
+  i
+    color: $btn-color
+    position: relative
+    left: $btn-size / 2
+    top: $btn-size / 2
+
+  ul
+    display: none

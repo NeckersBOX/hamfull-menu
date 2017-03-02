@@ -16,4 +16,7 @@ gulp.task ('sass', () =>
     .pipe (gulp.dest ('css'))
 );
 
-gulp.task ('watch', () => gulp.watch ('sass/hamfull.sass', [ 'sass' ]));
+gulp.task ('watch', () => gulp.watch ([
+  'sass/hamfull.sass',
+  'sass/_config.scss'
+], [ 'sass' ]));
