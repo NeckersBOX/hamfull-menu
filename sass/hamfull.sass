@@ -18,8 +18,38 @@
     left: 0
     margin: 0
     width: 100vw
-    height: 100vh
+    height: calc(100vh - #{$menu-margin-top})
     padding: 0
+    padding-top: $menu-margin-top
+    overflow: hidden
+    list-style: none
+
+    a
+      display: block
+      text-align: center
+      text-transform: uppercase
+      font-family: $menu-font-family
+      font-size: $menu-font-size
+      background-color: $link-background
+      color: $link-color
+      padding: $menu-list-padding
+      padding-left: 0
+      padding-right: 0
+      overflow: hidden
+      margin: 0
+      margin-bottom: $menu-space-between
+      white-space: nowrap
+      text-decoration: none
+
+      @if menu-animation
+        animation-duration: $menu-animation-duration
+        animation-name: hamfull-menu
+        animation-iteration-count: 1
+        animation-timing-function: ease
+
+      &:hover, &:focus
+        background-color: $link-background-hover
+        color: $link-color-hover
 
 .hamfull
   background-color: $btn-background
@@ -27,7 +57,7 @@
   height: $btn-size - $icon-margin-top
   cursor: pointer
   padding-top: $icon-margin-top
-  @if $animation
+  @if $btn-animation
     position: absolute
     top: 0
     left: 0
@@ -46,13 +76,13 @@
     background-color: $btn-background-hover
     transition: background-color $btn-transition-duration linear
 
-    @if $animation
+    @if $btn-animation
       animation-duration: $btn-animation-duration
-      animation-name: beats
+      animation-name: hamfull-button
       animation-iteration-count: infinite
       animation-timing-function: linear
 
-@keyframes beats
+@keyframes hamfull-button
   0%
     width: $btn-size
     height: $btn-size - $icon-margin-top
@@ -65,3 +95,13 @@
   100%
     width: $btn-size
     height: $btn-size - $icon-margin-top
+
+@keyframes hamfull-menu
+  from
+    margin: 50vw
+    margin-top: 0
+    margin-bottom: $menu-space-between
+
+  to
+    margin: 0
+    margin-bottom: $menu-space-between
