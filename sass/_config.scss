@@ -2,6 +2,8 @@ $btn-background: #1c1c1c;
 $btn-background-hover: #2a2a2a;
 $btn-color: #fafafa;
 $btn-size: 2.5rem;
+/* if you don't want the animation on the button, instead to
+ * modify this value, set $btn-animation to `false` */
 $btn-expand-size: 0.5rem;
 
 $menu-background: rgba(0,0,0,0.8);
