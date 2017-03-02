@@ -1,6 +1,6 @@
 {
   "name": "hamfull-menu",
-  "version": "1.0.6",
+  "version": "1.0.7",
   "description": "An hamburger-like menu, when you click over it the menu appears in fullwindow. No javascript libraries requested. Written in SASS.",
   "main": "index.js",
   "scripts": {
