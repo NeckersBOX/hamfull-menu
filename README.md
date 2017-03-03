@@ -2,6 +2,10 @@
 ---
 An hamburger-like menu, when you click over it the menu appears in fullwindow. No javascript libraries requested. Written in SASS.
 
+![Closed Preview](http://www.neckersbox.eu/share/images/hamfull-preview.png)
+
+![Opened Preview](http://www.neckersbox.eu/share/images/hamfull-preview2.png)
+
 ## Demo & Examples
 You can found a demo page in [this repository](https://github.com/NeckersBOX/hamfull-menu/blob/master/demo.html).
 
